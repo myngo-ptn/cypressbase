@@ -1,0 +1,27 @@
+{
+  "name": "basecypress",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "cypress run && node report.js"
+  },
+  "author": "ptn",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.4.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.21.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/report/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

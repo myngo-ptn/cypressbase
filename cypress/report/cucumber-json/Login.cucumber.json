@@ -1,0 +1,195 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login",
+    "line": 1,
+    "id": "login",
+    "tags": [],
+    "uri": "Login.feature",
+    "elements": [
+      {
+        "id": "login;user-login-to-the-system-with-valid-account",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "User login to the system with valid account",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 2
+          },
+          {
+            "name": "@TC_001",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user opens Login page",
+            "result": {
+              "status": "passed",
+              "duration": 21253000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user enters user name as 'standard_user' and password as 'secret_sauce'",
+            "result": {
+              "status": "passed",
+              "duration": 596000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user clicks on \"Login\" button",
+            "result": {
+              "status": "passed",
+              "duration": 103000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "user must see menu button",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;user-login-to-the-system-with-valid-account",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "User login to the system with valid account",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 2
+          },
+          {
+            "name": "@TC_001",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user opens Login page",
+            "result": {
+              "status": "passed",
+              "duration": 3968000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user enters user name as 'performance_glitch_user' and password as 'secret_sauce'",
+            "result": {
+              "status": "passed",
+              "duration": 699000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user clicks on \"Login\" button",
+            "result": {
+              "status": "passed",
+              "duration": 5098000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "user must see menu button",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;user-login-to-the-system-with-locked-account",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "User login to the system with locked account",
+        "tags": [
+          {
+            "name": "@TC_002",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "user opens Login page",
+            "result": {
+              "status": "passed",
+              "duration": 7095000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "user enters user name as 'locked_out_user' and password as 'secret_sauce'",
+            "result": {
+              "status": "passed",
+              "duration": 597000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "user clicks on \"Login\" button",
+            "result": {
+              "status": "passed",
+              "duration": 86000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "user must see username and password fields are highlighted",
+            "result": {
+              "status": "passed",
+              "duration": 49000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "user must see block message",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
