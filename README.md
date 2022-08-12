@@ -18,7 +18,7 @@ Behavioural Driven Development **(BDD)** automation framework using Java, Seleni
 1. BDD framework using Cucumber. Feature files can be written easily using Given, When, Then etc.
 2. Browser (Chrome/Firefox) can be configured at run time from command line (or Continuous Integration tool, if configured).
 3. Tests can run in headless browser (PhantomJS) by passing a parameter at run time.
-4. Screenshot would be taken if any scenario failed and saved under **screenshots" folder.
+4. Screenshot would be taken if any scenario failed and saved under **screenshots** folder.
 5. HTML report gets generated after each test run and can be found /cypress/report/html-report/index.html
 
 
