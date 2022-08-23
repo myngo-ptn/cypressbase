@@ -88,10 +88,10 @@ Every cucumber test case MUST have a tag name, for e.g. @TC_001
 
 To run all available test cases (all tags) in automation project, execute following command:
 
-    **$ npx cypress open**
+   **$ npx cypress open**
 
 To run tests headlessly (this mode is used for executing test in background - not open web browser)
 
-    **$ npm run test**
+   **$ npm run test**
 
 
