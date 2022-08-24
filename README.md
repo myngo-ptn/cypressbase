@@ -71,8 +71,16 @@ You can see the test results at different level
    - Clone automation project by using https: https://github.com/myngo-ptn/cypressbase.git
    
 3) Install Visual Studio Code at: https://code.visualstudio.com/download
-4) Install cucumber extension on Visual Studio Code. Open View > Extensions > type cucumber and install
+4) Install cucumber extension on Visual Studio Code. Open View > Extensions > type cucumberautocomplete and install
    ![cucumber_extension](cypress/fixtures/images/cucumber_extension.png)
+
+5) Create a package.json file to specify some of the project’s attributes. These attributes include the project’s name, initial version, and description. (Press Enter to skip each attribute)
+
+**$ npm init**
+
+6) Install cypress package:
+
+**$ npm install cypress --save-dev**
 
 ## Test Execution
 Every cucumber test case MUST have a tag name, for e.g. @TC_001

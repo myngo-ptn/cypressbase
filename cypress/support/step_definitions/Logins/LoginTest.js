@@ -21,14 +21,15 @@ Given('user opens Login page', () => {
 });
 
 
-When(`user enters user name as {string} and password as {string}`, (username, password) => {
+When('user enters user name as {string} and password as {string}', (username, password) => {
     loginPage.getUserNameTextBox()
         .type(username);
     loginPage.getPasswordTextBox()
         .type(password);
 })
 
-And(`user clicks on {string} button`, (ButtonName) => {
+And('user clicks on {string} button', (loginbtn) => {
+    var loginBtn = loginbtn;
     loginPage.getLoginButton()
         .click();
 })
