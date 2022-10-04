@@ -2,14 +2,13 @@
 
 # Cypress Automation Test Guideline
 
-Behavioural Driven Development **(BDD)** automation framework using Java, Selenium, Cucumber, TestNG, Maven, PhantomJS
-
+Behavioural Driven Development **(BDD)** automation framework using Javascript, Cypress, Cucumber
 
 ## Tools and Technologies Used
 1. Language: Javascript
 2. Automation Tool: Cypress
 3. BDD Approach: Cucumber
-4. Reporting: [Multiple Cucumber HTML Reporter](https://www.npmjs.com/package/multiple-cucumber-html-reporter)
+4. Reporting: [@shelex/cypress-allure-plugin](https://www.npmjs.com/package/@shelex/cypress-allure-plugin)
 5. Follows "Page Object Model"
 6. Supports multiple browsers and no need to download drivers manually
 
@@ -17,9 +16,8 @@ Behavioural Driven Development **(BDD)** automation framework using Java, Seleni
 ## Features of Framework
 1. BDD framework using Cucumber. Feature files can be written easily using Given, When, Then etc.
 2. Browser (Chrome/Firefox) can be configured at run time from command line (or Continuous Integration tool, if configured).
-3. Tests can run in headless browser (PhantomJS) by passing a parameter at run time.
-4. Screenshot would be taken if any scenario failed and saved under **screenshots** folder.
-5. HTML report gets generated after each test run and can be found /cypress/report/html-report/index.html
+3. Screenshot would be taken if any scenario failed and saved under **screenshots** folder.
+4. HTML report gets generated after each test run and can be found /cypress/allure-report/index.html
 
 
 ## Project Structure
@@ -35,7 +33,7 @@ Behavioural Driven Development **(BDD)** automation framework using Java, Seleni
 
 **folder: fixtures** : Test data and input
 
-**folder: report** : Test reports
+**folder: allure-report** : Test reports
 
 **folder: download** : The download files will be stored here
 
@@ -66,12 +64,20 @@ You can see the test results at different level
 
 1) Clone automation source by using either **SourceTree** or **GitExtensions** for your convenience, steps are as below:
 
-2) Source Tree, download and install SourceTree to clone github project at: https://www.sourcetreeapp.com/
-
-   - Clone automation project by using https: https://github.com/myngo-ptn/cypressbase.git
+   1.1) Follow this link (https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and create an access token
    
-3) Install Visual Studio Code at: https://code.visualstudio.com/download
-4) Install cucumber extension on Visual Studio Code. Open View > Extensions > type cucumberautocomplete and install
+   1.2) To clone code, execute following command: 
+   
+      **$git clone https://github.com/myngo-ptn/cypressF24.git** 
+   
+   1.3) Enter your username and use the access token as password!!
+   
+2) Install Visual Studio Code at: https://code.visualstudio.com/download
+3) Install cucumber auto complete extension on Visual Studio Code. Open View > Extensions > type cucumberautocomplete and install
+   ![cucumber_extension](cypress/fixtures/images/cucumber_extension.png)
+
+4) Install live server extension on Visual Studio Code. Open View > Extensions > type live server and install
+   ![live_server_extension](cypress/fixtures/images/live_server_extension.png)
 
 5) Create a package.json file to specify some of the project’s attributes. These attributes include the project’s name, initial version, and description. (Press Enter to skip each attribute)
 
@@ -89,8 +95,10 @@ To run all available test cases (all tags) in automation project, execute follow
 
    **$ npx cypress open**
 
-To run tests headlessly (this mode is used for executing test in background - not open web browser)
+To run tests headlessly (this mode is used for executing test in background - not open web browser) and automated generate HTML report:
 
-   **$ npm run test**
+   **$ npm test**
 
+To view HTML report:
+   **Right click on allure-report\index.html and select open with Live Server**
 

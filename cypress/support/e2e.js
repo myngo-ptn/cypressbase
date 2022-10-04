@@ -18,3 +18,15 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+import '@shelex/cypress-allure-plugin';
+//require('cypress-xpath')
+
+// Alternatively you can use CommonJS syntax:
+// require('./commands')
+const resizeObserverLoopErrRe = /^[^(undefined: undefined)]/
+Cypress.on('uncaught:exception', (err) => {
+    // returning false here prevents Cypress from falling the test
+    if (resizeObserverLoopErrRe.test(err.message)){
+        return false;
+    }
+})

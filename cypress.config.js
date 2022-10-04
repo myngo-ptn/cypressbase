@@ -1,12 +1,17 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
+  watchForFileChanges: false,
   video: false,
+  viewportWidth: 1920,
+  viewportHeight: 1080,
   env: {
     USER_NAME: 'standard_user',
     PASSWORD: 'secret_sauce',
-    TAGS: ""
+    TAGS: "@Login"
 
   },
   e2e: {
@@ -15,8 +20,10 @@ module.exports = defineConfig({
     baseUrl: 'https://www.saucedemo.com',
     specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+      on('file:preprocessor', cucumber());
+      allureWriter(on, config);
+      return config;
+      // return require('./cypress/plugins/index.js')(on, config)
     }
-
   },
 })

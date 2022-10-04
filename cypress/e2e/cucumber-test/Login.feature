@@ -1,5 +1,5 @@
-Feature: Login
 @Login
+Feature: Login
 
   @TC_001
   Scenario Outline: User login to the system with valid account

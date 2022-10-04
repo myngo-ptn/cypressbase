@@ -28,7 +28,7 @@ When('user enters user name as {string} and password as {string}', (username, pa
         .type(password);
 })
 
-And('user clicks on {string} button', (loginbtn) => {
+When('user clicks on {string} button', (loginbtn) => {
     var loginBtn = loginbtn;
     loginPage.getLoginButton()
         .click();
