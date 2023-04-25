@@ -12,13 +12,17 @@ module.exports = defineConfig({
     USER_NAME: 'standard_user',
     PASSWORD: 'secret_sauce',
     TAGS: "@Login"
-
   },
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     baseUrl: 'https://www.saucedemo.com',
     specPattern: "**/*.feature",
+    experimentalSessionAndOrigin: true,
+    experimentalModifyObstructiveThirdPartyCode: true,
+    experimentalInteractiveRunEvents: true,
+    chromeWebSecurity: false,
+    pageLoadTimeout: 180000,
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber());
       allureWriter(on, config);
