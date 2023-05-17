@@ -101,4 +101,3 @@ To run tests headlessly (this mode is used for executing test in background - no
 
 To view HTML report:
    **Right click on allure-report\index.html and select open with Live Server**
-
