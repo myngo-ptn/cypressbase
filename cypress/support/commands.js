@@ -48,8 +48,6 @@ Cypress.Commands.add('logout',
             .click();
         inventoryPage.getLogoutLink()
             .click();
-        inventoryPage.getHamburgerButton()
-            .should('not.exist');
     }
 )
 

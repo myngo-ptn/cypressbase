@@ -1,11 +1,8 @@
-import InventoryPage from "../../support/PageObject/InventoryPage";
-import LoginPage, { verifyErrorMessageIsDisplayed } from "../../support/PageObject/LoginPage";
+import LoginPage, { verifyErrorMessageIsDisplayed } from "../../../support/PageObject/LoginPage";
 
-
-describe("Create an account", () => {
+describe("[cypress-xml-reporter][codeFirst][All pass] Create an account", () => {
     const loginPage = new LoginPage();
-    const inventoryPage = new InventoryPage();
-    let email, testdata;
+    let testdata;
     let dataPath = "login/accounts";
     let userName = Cypress.env('USER_NAME');
     let password = Cypress.env('PASSWORD');
@@ -15,13 +12,13 @@ describe("Create an account", () => {
             testdata = accountJsonFile;
         });
     });
-
+    
     beforeEach(() => {
         cy.visit("/");
     });
 
     it("Verify error message when user login with blank user name", function () {
-
+        
         loginPage.getLoginButton()
             .click();
 
@@ -89,7 +86,6 @@ describe("Create an account", () => {
             .verifyTextBoxIsHighlighted();
 
         verifyErrorMessageIsDisplayed(testdata.accounts[2].errorMessage);
-        
 
     });
 

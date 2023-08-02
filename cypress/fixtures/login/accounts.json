@@ -16,5 +16,20 @@
             "password": "zyx",
             "errorMessage": "Epic sadface: Username and password do not match any user in this service"
         }
-    ]
+    ],
+    "checkout": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "zip": "1234",
+        "errorMessages": [
+            "Error: First Name is required",
+            "Error: Last Name is required",
+            "Error: Postal Code is required"
+        ],
+        "completeMessage": "Thank you for your order!"
+    },
+    "problemAccount": {
+        "userName": "problem_user",
+        "password": "secret_sauce"
+    }
 }

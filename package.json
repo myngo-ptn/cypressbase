@@ -16,30 +16,15 @@
   "author": "ptn",
   "license": "ISC",
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.31.0",
-    "cypress": "^12.9.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "@vpavlik62/cypress-junit-reporter": "^1.0.0",
+    "allure-commandline": "^2.23.1",
+    "cypress": "^12.13.0",
     "cypress-iframe": "^1.0.1",
-    "multiple-cucumber-html-reporter": "^1.21.6"
-  },
-  "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/step_definitions",
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/report/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
+    "cypress-xml-reporter": "^0.0.6",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
-    "allure-commandline": "^2.18.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/myngo-ptn/cypressbase.git"
-  },
-  "bugs": {
-    "url": "https://github.com/myngo-ptn/cypressbase/issues"
-  },
-  "homepage": "https://github.com/myngo-ptn/cypressbase#readme"
+    "cypress-parallel": "^0.13.0"
+  }
 }

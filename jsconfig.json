@@ -3,7 +3,6 @@
         "./node_modules/cypress",
         "cypress/**/*.js",
         "**/*.ts",
-        "cypress/***/**/*.feature",
     ],
     "exclude": [
         "node_modules"
