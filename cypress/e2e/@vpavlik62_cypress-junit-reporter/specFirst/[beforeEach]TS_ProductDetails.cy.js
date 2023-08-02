@@ -26,7 +26,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][beforeEach] Product Det
         cy.login(userName1, password);
     });
 
-    it("C6100 Verify that product detail is displayed precisely on Product Details page when navigating from Inventory page", function () {
+    it(" C6100 Verify that product detail is displayed precisely on Product Details page when navigating from Inventory page", function () {
         inventoryPage.getProductName(productsData.products[0].name)
             .click();
         productDetailsPage.getProductName()
@@ -37,7 +37,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][beforeEach] Product Det
             .should('have.text', productsData.products[0].price)
     });
 
-    it("C6101 Verify that the user can remove an added product on the Product Details page", function () {
+    it(" C6101 Verify that the user can remove an added product on the Product Details page", function () {
         inventoryPage.getRemoveButtonByProductName(productsData.products[0].name)
             .should('not.exist');
         inventoryPage.getAddToCartButtonByProductName(productsData.products[0].name)

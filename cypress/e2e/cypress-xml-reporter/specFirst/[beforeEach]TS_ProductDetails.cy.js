@@ -26,7 +26,7 @@ describe("[cypress-xml-reporter][specFirst][beforeEach] Product Details", () => 
         cy.login(userName1, password);
     });
 
-    it("C6078 Verify that product detail is displayed precisely on Product Details page when navigating from Inventory page", function () {
+    it(" C6078 Verify that product detail is displayed precisely on Product Details page when navigating from Inventory page", function () {
         inventoryPage.getProductName(productsData.products[0].name)
             .click();
         productDetailsPage.getProductName()
@@ -37,7 +37,7 @@ describe("[cypress-xml-reporter][specFirst][beforeEach] Product Details", () => 
             .should('have.text', productsData.products[0].price)
     });
 
-    it("C6079 Verify that the user can remove an added product on the Product Details page", function () {
+    it(" C6079 Verify that the user can remove an added product on the Product Details page", function () {
         inventoryPage.getRemoveButtonByProductName(productsData.products[0].name)
             .should('not.exist');
         inventoryPage.getAddToCartButtonByProductName(productsData.products[0].name)

@@ -27,7 +27,7 @@ describe("[cypress-xml-reporter][specFirst][after][Last TC passes] Sort products
             .should('exist');
     })
 
-    it("C6080 Verify that the products are sorted according to Name (A to Z) by default", function () {
+    it(" C6080 Verify that the products are sorted according to Name (A to Z) by default", function () {
         inventoryPage.getProductNames()
             .then((els) => {
                 let currentArr = [];
@@ -41,7 +41,7 @@ describe("[cypress-xml-reporter][specFirst][after][Last TC passes] Sort products
             })
     });
 
-    it("C6082 Verify that user can sort the products according to Name (Z to A)", function () {
+    it(" C6082 Verify that user can sort the products according to Name (Z to A)", function () {
         inventoryPage.getSortDropdown()
             .select(productsData.sortCriteria[1]);
         inventoryPage.getProductNames()

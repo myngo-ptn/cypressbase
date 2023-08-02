@@ -17,7 +17,7 @@ describe("[cypress-xml-reporter][specFirst][All pass] Create an account", () => 
         cy.visit("/");
     });
 
-    it("C6071 Verify error message when user login with blank user name", function () {
+    it(" C6071 Verify error message when user login with blank user name", function () {
         
         loginPage.getLoginButton()
             .click();
@@ -32,7 +32,7 @@ describe("[cypress-xml-reporter][specFirst][All pass] Create an account", () => 
         
     });
 
-    it("C6072 Verify error message when user login with blank password", function () {
+    it(" C6072 Verify error message when user login with blank password", function () {
         loginPage.getUserNameTextBox()
             .type(testdata.accounts[1].username);
 
@@ -49,7 +49,7 @@ describe("[cypress-xml-reporter][specFirst][All pass] Create an account", () => 
         
     });
 
-    it("C6073 Verify error message when user login with invalid user name and password", function () {
+    it(" C6073 Verify error message when user login with invalid user name and password", function () {
         loginPage.getUserNameTextBox()
             .type(testdata.accounts[2].username);
 
@@ -69,7 +69,7 @@ describe("[cypress-xml-reporter][specFirst][All pass] Create an account", () => 
         
     });
 
-    it("C6074 Verify error message when user login with invalid password", function () {
+    it(" C6074 Verify error message when user login with invalid password", function () {
         loginPage.getUserNameTextBox()
             .type(userName);
 
@@ -89,7 +89,7 @@ describe("[cypress-xml-reporter][specFirst][All pass] Create an account", () => 
 
     });
 
-    it("C6075 Verify that user can login with valid account", function () {
+    it(" C6075 Verify that user can login with valid account", function () {
         cy.login(userName, password);
         cy.logout();
     });

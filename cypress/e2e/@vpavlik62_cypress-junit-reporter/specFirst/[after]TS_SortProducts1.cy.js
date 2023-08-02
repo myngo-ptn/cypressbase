@@ -32,7 +32,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][after][Last TC fails] S
             .should('not.exist');
     })
 
-    it("C6104 Verify that user can sort the products according to Price (low to high)", function () {
+    it(" C6104 Verify that user can sort the products according to Price (low to high)", function () {
         cy.login(userName, password);
 
         inventoryPage.getSortDropdown()
@@ -50,7 +50,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][after][Last TC fails] S
             })
     });
 
-    it("C6105 Verify that user can sort the products according to Price (high to low)", function () {
+    it(" C6105 Verify that user can sort the products according to Price (high to low)", function () {
         cy.login(accountData.problemAccount.userName, accountData.problemAccount.password);
 
         inventoryPage.getSortDropdown()

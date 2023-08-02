@@ -40,7 +40,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][afterEach][TC fail in '
             .should('not.exist');
     })
 
-    it("C6110 Verify that the user can not checkout with First Name blank", function () {
+    it(" C6110 Verify that the user can not checkout with First Name blank", function () {
         checkoutPage.getLastNameInput()
             .type(accountsData.checkout.lastName);
         checkoutPage.getZipCodeInput()
@@ -51,7 +51,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][afterEach][TC fail in '
             .should('eq', accountsData.checkout.errorMessages[0]);
     });
 
-    it("C6111 Verify that the user can not checkout with Last Name blank", function () {
+    it(" C6111 Verify that the user can not checkout with Last Name blank", function () {
         checkoutPage.getFirstNameInput()
             .type(accountsData.checkout.firstName);
         checkoutPage.getZipCodeInput()
@@ -62,7 +62,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][afterEach][TC fail in '
             .should('eq', accountsData.checkout.errorMessages[1]);
     });
 
-    it("C6112 Verify that the user can not checkout with Zip Code blank", function () {
+    it(" C6112 Verify that the user can not checkout with Zip Code blank", function () {
         checkoutPage.getFirstNameInput()
             .type(accountsData.checkout.firstName);
         checkoutPage.getLastNameInput()
@@ -73,7 +73,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][afterEach][TC fail in '
             .should('eq', accountsData.checkout.errorMessages[2]);
     });
 
-    it("C6113 Verify that the user can checkout with a valid First Name, Last Name, and Zip Code", function () {
+    it(" C6113 Verify that the user can checkout with a valid First Name, Last Name, and Zip Code", function () {
         checkoutPage.getFirstNameInput()
             .type(accountsData.checkout.firstName);
         checkoutPage.getLastNameInput()

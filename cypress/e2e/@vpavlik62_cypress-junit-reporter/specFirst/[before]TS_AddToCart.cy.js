@@ -28,7 +28,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][before] Add product to 
         cy.logout()
     });
 
-    it("C6098 Verify that user can add product to cart and remove product from cart screen", function () {
+    it(" C6098 Verify that user can add product to cart and remove product from cart screen", function () {
         inventoryPage.getAddToCartButtonByProductName(productsData.products[0].name)
             .click();
         inventoryPage.getCartBadge()
@@ -41,7 +41,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][before] Add product to 
             .should('not.exist');
     });
 
-    it("C6099 Verify that user can add product to cart and remove product from inventory screen", function () {
+    it(" C6099 Verify that user can add product to cart and remove product from inventory screen", function () {
         inventoryPage.getAddToCartButtonByProductName(productsData.products[0].name)
             .click();
         inventoryPage.getCartBadge()

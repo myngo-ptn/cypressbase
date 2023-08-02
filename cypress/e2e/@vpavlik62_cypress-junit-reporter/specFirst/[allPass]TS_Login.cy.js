@@ -17,7 +17,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][All pass] Create an acc
         cy.visit("/");
     });
 
-    it("C6093 Verify error message when user login with blank user name", function () {
+    it(" C6093 Verify error message when user login with blank user name", function () {
         
         loginPage.getLoginButton()
             .click();
@@ -32,7 +32,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][All pass] Create an acc
         
     });
 
-    it("C6094 Verify error message when user login with blank password", function () {
+    it(" C6094 Verify error message when user login with blank password", function () {
         loginPage.getUserNameTextBox()
             .type(testdata.accounts[1].username);
 
@@ -49,7 +49,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][All pass] Create an acc
         
     });
 
-    it("C6095 Verify error message when user login with invalid user name and password", function () {
+    it(" C6095 Verify error message when user login with invalid user name and password", function () {
         loginPage.getUserNameTextBox()
             .type(testdata.accounts[2].username);
 
@@ -69,7 +69,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][All pass] Create an acc
         
     });
 
-    it("C6096 Verify error message when user login with invalid password", function () {
+    it(" C6096 Verify error message when user login with invalid password", function () {
         loginPage.getUserNameTextBox()
             .type(userName);
 
@@ -89,7 +89,7 @@ describe("[@vpavlik62_cypress-junit-reporter][specFirst][All pass] Create an acc
 
     });
 
-    it("C6097 Verify that user can login with valid account", function () {
+    it(" C6097 Verify that user can login with valid account", function () {
         cy.login(userName, password);
         cy.logout();
     });
